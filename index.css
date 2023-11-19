@@ -1,0 +1,187 @@
+*{
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.main-box{
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.header img {
+  width: 120px;
+  height: 120px;
+}
+
+.header h1 {
+    font-size: 48px;
+}
+
+.slack-header{
+    font-size: 40px;
+    font-weight: bolder;
+    align-items: center;
+       
+}
+
+.social-buttons{
+
+
+
+}
+
+.logo-signin{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    padding: 15px;
+}
+
+.sign-in-button{
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    border-width: 2px;
+    padding: 0;
+    display: flex;
+    min-width: 96px;
+    height: 48px;
+    padding: 0 16px 3px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  position: relative;
+  
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #000;
+}
+
+form {
+    width: 300px;
+    justify-content: center;
+  }
+  
+  form input  {
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-self: center;
+    font-size: larger;
+    
+  }
+  
+  form button  {
+    width: 142%;
+    padding: 10px;
+    background-color: #4a154be6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: large;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+  }
+
+  .button {
+    width: 106%;
+    padding: 10px;
+    background-color: #4a154be6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: large;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 80%; /* Adjust the maximum width of the modal */
+  text-align: center;
+}
+
+/* Style for the overlay background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Style for the OK button inside the modal */
+.modal button {
+  background-color: #4a154be6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Style for the link in the main box */
+.main-box a {
+  font-weight: 600;
+  color: #4a154be6;
+  text-decoration: none;
+}
+
+/* Style for the link on hover */
+.main-box a:hover {
+  text-decoration: underline;
+  color: #4a154be6;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in to Slack</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="assets/slack.png">
+
+    <style>
+        .error-message {
+            color: red; 
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // userdata arrsy
+        var userdata = [
+            { username: 'user1', email: 'rakshith.durai@gmail.com', password: 'pass123' },
+            { username: 'user2', email: 'admin@gmail.com', password: 'admin123' },
+        ];
+
+        function validateLoginForm(event) {
+            
+            event.preventDefault(); 
+
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["password"].value;
+            var user = userdata.find(user => user.email === email);
+
+            if (!user || user.password !== password) {
+                document.getElementById('error-message').innerText = "Invalid email or password. Please try again.";
+                return false;
+            }
+
+
+
+            document.getElementById('error-message').innerText = "";
+            var username = user.username;
+
+
+            document.getElementById('success-message').innerText = "Login successful! Redirecting...";
+
+            setTimeout(function () {
+                window.location.href = '/slack.html';
+            }, 2000); 
+
+            return true;
+
+            
+        }
+    </script>
+</head>
+
+
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="assets/slack-logo.svg" alt="Slack logo">
+        </div>
+        <div class="main-box">
+            <span class="slack-header">Sign in to Slack</span>
+            <p style="font-size: 15px; padding: 5px; align-items: center;">We suggest using <span style="font-weight: 600;">the email address you use at work.</span></p>
+            <div class="social-buttons">
+                <form name="loginForm" action="/sign-in" method="post" onsubmit="return validateLoginForm(event)">
+                    <input type="email" name="email" placeholder="name@work-email.com">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit">Sign in With Email</button>
+                </form>
+                <a href="/register.html"><button class="button">Register</button></a>
+                <div class="error-message" id="error-message" style="color: red;" ></div>
+                <div class="success-message" id="success-message" style="color: red;"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p><a href="/privacy-terms">Privacy & terms</a> | <a href="/contact-us">Contact us</a> | <a href="/change-region">Change region</a></p>
+        </footer>
+    </div>
+</body>
+</html>
